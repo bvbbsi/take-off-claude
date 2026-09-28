@@ -15,7 +15,11 @@ export const OSM_RASTER_STYLE: StyleSpecification = {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragsgivare',
     },
   },
-  layers: [{ id: 'osm', type: 'raster', source: 'osm', paint: { 'raster-saturation': -0.6, 'raster-opacity': 0.9 } }],
+  // Bakgrundsfärg under rastret så att datalagren syns även om kartbrickor inte kan laddas.
+  layers: [
+    { id: 'bg', type: 'background', paint: { 'background-color': '#e8eef0' } },
+    { id: 'osm', type: 'raster', source: 'osm', paint: { 'raster-saturation': -0.6, 'raster-opacity': 0.9 } },
+  ],
 };
 
 export const SOIL_COLORS: Record<SoilType, string> = {

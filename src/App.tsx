@@ -42,7 +42,7 @@ export default function App() {
     <div className="flex h-full flex-col">
       <header className="z-30 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-slate-200 bg-white px-3 py-1.5 shadow-sm">
         <div className="flex items-center gap-1.5">
-          <img src="/favicon.svg" alt="" className="h-6 w-6" />
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" className="h-6 w-6" />
           <span className="font-bold tracking-tight text-teal-900">Sitefinder</span>
           <span className="hidden text-xs text-slate-400 lg:inline">Platsanalys för mark, effekt och markkalkyl</span>
         </div>
